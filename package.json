@@ -1,0 +1,19 @@
+{
+  "name": "logicapp-logviewer",
+  "version": "1.0.0",
+  "description": "Allows navigating a Single-Tenant Logic App (Standard) in your VSCode development environment or when deployed to your local Kubernetes (ie. MicroK8S or other) environment.",
+  "main": "logicapp-logviewer.sh",
+  "bin": {
+    "logicapp-logviewer": "./logicapp-logviewer.sh"
+  },
+  "scripts": {
+    "postinstall": "echo '\\033[0;31m\nLogic App Log Viewer installed.  In order to use the Logic App Log Viewer, dialog, jq, and less.  Add the following to your Dockerfile to include in your container image.\\n\\nRUN \\\\\\n\\tapt-get update && \\\\\\n\\tapt-get install less dialog -y && \\\\\\n\\tcurl -L \"https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64\" -o /usr/bin/jq && \\\\\\n\\tchmod a+x /usr/bin/jq\\n\\n\\033[0m'"
+  },
+  "keywords": ["Logic Apps", "Logic App", "LogicApp", "LogicApps", "Single Tenant", "Dialog"],
+  "author": "J-Cat",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "license": "CC-BY-NC-4.0"
+}
