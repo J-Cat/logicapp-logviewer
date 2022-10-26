@@ -31,17 +31,17 @@ BASEURL=http://localhost APICODE=mymasterkey logicapp-logviewer
 
 ## Screenshots
 
-![List Workflows/Main Page](./images/list-workflows.png)
+![List Workflows/Main Page](images/list-workflows.png)
 
-![Workflow](./images/workflow.png)
+![Workflow](images/workflow.png)
 
-![Workflow Run](./images/workflow-run.png)
+![Workflow Run](images/workflow-run.png)
 
-![Run Actions](./images/workflow-run-actions.png)
+![Run Actions](images/workflow-run-actions.png)
 
-![Run Action](./images/workflow-run-action.png)
+![Run Action](images/workflow-run-action.png)
 
-![Run Action Input](./images/workflow-run-action-input.png)
+![Run Action Input](images/workflow-run-action-input.png)
 
 ## Dependencies
 - Only supports install on Linux (Debian/Ubuntu/WSL2-Ubuntu/Docker/etc)

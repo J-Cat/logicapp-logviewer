@@ -1,6 +1,6 @@
 {
   "name": "logicapp-logviewer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "homepage": "https://github.com/J-Cat/logicapp-logviewer",
   "description": "Allows navigating a Single-Tenant Logic App (Standard) in your VSCode development environment or when deployed to your local Kubernetes (ie. MicroK8S or other) environment.",
   "main": "logicapp-logviewer.sh",
@@ -15,6 +15,10 @@
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/J-Cat/logicapp-logviewer"
   },
   "license": "CC-BY-NC-4.0"
 }
