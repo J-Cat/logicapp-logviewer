@@ -8,56 +8,6 @@ REPLACEURL="https://localhost:443"
 BASEURL=$(echo $ASPNETCORE_URLS | sed -E 's/\+/localhost/g')
 BASEURL=${BASEURL:='http://localhost:7071'}
 
-#check dependencies
-if command -v sudo > /dev/null 2>&1; then
-    SUDO_CMD="sudo"
-fi
-if ! command -v curl > /dev/null 2>&1; then
-    read -p '"curl" is required to use this script but was not found.  Would you like to install it? [Y] ' INSTALL_CURL
-    case $INSTALL_CURL in
-    Y|y)
-        $SUDO_CMD apt-get install curl -y
-        ;;
-    *)
-        exit 1;
-        ;;
-    esac
-fi
-if ! command -v dialog > /dev/null 2>&1; then
-    read -p '"dialog" is required to use this script but was not found.  Would you like to install it? [Y] ' INSTALL_DIALOG
-    case $INSTALL_DIALOG in
-    Y|y)
-        $SUDO_CMD apt-get install dialog -y
-        ;;
-    *)
-        exit 1;
-        ;;
-    esac
-fi
-if ! command -v jq > /dev/null 2>&1; then
-    read -p '"jq" is required to use this script but was not found.  Would you like to install it? [Y] ' INSTALL_JQ
-    case $INSTALL_JQ in
-    Y|y)
-        $SUDO_CMD curl "https://objects.githubusercontent.com/github-production-release-asset-2e65be/5101141/6387d980-de1f-11e8-8d3e-4455415aa408?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20221022%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20221022T045948Z&X-Amz-Expires=300&X-Amz-Signature=eaa2960d78083d54888085534d3833f808f84de718d73224351684bbd80934da&X-Amz-SignedHeaders=host&actor_id=22578964&key_id=0&repo_id=5101141&response-content-disposition=attachment%3B%20filename%3Djq-linux64&response-content-type=application%2Foctet-stream" -o /usr/bin/jq
-        $SUDO_CMD chmod a+x /usr/bin/jq
-        ;;
-    *)
-        exit 1;
-        ;;
-    esac
-fi
-if ! command -v less > /dev/null 2>&1; then
-    read -p '"less" is required to use this script but was not found.  Would you like to install it? [Y] ' INSTALL_LESS
-    case $INSTALL_LESS in
-    Y|y)
-        $SUDO_CMD apt-get install less -y
-        ;;
-    *)
-        exit 1;
-        ;;
-    esac
-fi
-
 # get API code and list of workflows
 if [ "$APICODE" != "" ]; then
     echo "APICODE already set.  Not retrieving."
