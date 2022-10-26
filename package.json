@@ -1,6 +1,7 @@
 {
   "name": "logicapp-logviewer",
-  "version": "1.0.0",
+  "version": "1.0.1",
+  "homepage": "https://github.com/J-Cat/logicapp-logviewer",
   "description": "Allows navigating a Single-Tenant Logic App (Standard) in your VSCode development environment or when deployed to your local Kubernetes (ie. MicroK8S or other) environment.",
   "main": "logicapp-logviewer.sh",
   "bin": {
